@@ -7,7 +7,7 @@ using namespace std;
 void Task1()
 {
 	int a, b;
-	cout << "Введите 2 целых числа" << endl;
+	cout << "Введите 2 целых числа, для проверки принадлежности их суммы интервалу от [10 до 20]" << endl;
 	cout << "A = ";
 	cin >> a;
 	cout << "B = ";
@@ -21,6 +21,8 @@ void Task1()
 void Task2()
 {
 	const int a = 10, b = 10;
+	cout << "Две целочисленные константы, обе равны десяти сами по себе, либо их сумма равна десяти?" << endl;
+	cout << "A = " << a << " B = " << b << endl;
 	if (a == 10 && b == 10 || a + b == 10) cout << "true";
 	else cout << "false";
 	cout << endl << endl;
@@ -29,6 +31,7 @@ void Task2()
 void Task3()
 {
 	size_t SIZE = 50;
+	cout << "Cписок всех нечетных чисел он 1 до 50" << endl;
 	cout << "Your numbers: ";
 	for (size_t i = 1; i <= SIZE; i++)
 	{
@@ -57,7 +60,18 @@ void Task4()
 
 void Task5()
 {
+	cout << "Проверка года на високосность" << endl;
+	int year = 0;
+	do
+	{
+		cout << "Введите год от 1 до 3000: " << endl;
+		cin >> year;
+	} while (year < 1 || year > 3000);
 
+	if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) cout << "Високосный" << endl;
+	else cout << "Не високосный" << endl;
+
+	cout << endl;
 }
 
 
